@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<!-- Theme by pierdtimp.ro http://www.pierdtimp.ro -->
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<!--[if lt IE 8]>
+	<style type="text/css">
+	img { behavior: url(<{xoImgUrl /iepngfix.htc}>); }
+	</style>
+<![endif]-->	
+</head>
+<body>
+ <br />
+ <table class="toptable" cellspacing="0">
+    <tr>
+      <td id="headerlogo"><img src="<{$xoops_imageurl}>images/parrot_01.png" width="227" height="194" alt="<{$xoops_pagetitle}>" /></td>
+      <td id="headerbanner"><div id="stitle">
+<{$xoops_sitename}></div><img src="<{$xoops_imageurl}>images/parrot_02.png" width="100%" height="194" alt="<{$xoops_pagetitle}>" /></td>
+      <td id="headerlogo"><img src="<{$xoops_imageurl}>images/parrot_03.png" width="226" height="194" alt="<{$xoops_pagetitle}>" /></td>
+    </tr>
+    <tr>
+      <td id="headerbar" colspan="2"><a href="<{$xoops_url}>/">Home</a> 
+                  | <a href="<{$xoops_url}>/modules/newbb/">Forums</a> | <a href="<{$xoops_url}>/modules/mydownloads/">Downloads</a> 
+                  | <a href="<{$xoops_url}>/modules/news/">News</a> | <a href="<{$xoops_url}>/modules/mylinks/">Links</a> 
+                  | <a href="<{$xoops_url}>/modules/contact/">Contact</a></td>
+                    <td id="searchbar" align="right" colspan="1">
+										<form style="margin: 0px;" action="<{$xoops_url}>/search.php" method="get">
+  											<input type="text" name="query" size="20" />
+											<input type="hidden" name="action" value="results" />
+											<input class="formButton" type="submit" value="<{$smarty.const._SEARCH}>" />
+  											<{if $smarty.const.modid > 1}>
+    										<input type="hidden" name="mids[]" value="<{$smarty.const.modid}>" />
+  											<{/if}>
+										</form>
+			  </td>
+</tr>
+  </table>
+
+  <table class="maintable" cellspacing="0">
+<tr>
+<td id="leftcolumn">
+<table width="100%"  border="0" cellspacing="0" cellpadding="0" class="left">
+  <tr>
+    <td><table width="100%"  border="0" cellspacing="0" cellpadding="0" >
+      <tr>
+        <td class="leftTLB">&nbsp;</td>
+        <td class="leftTC">&nbsp;</td>
+        <td class="leftTR">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+  <td class="leftCL"><img src="<{$xoops_imageurl}>images/zblock_06.jpg" alt="" width="27" height="198" /></td>
+  <td class="leftCC">
+        <div>
+	<!-- Start left blocks loop -->
+        <{foreach item=block from=$xoops_lblocks}>
+          <{include file="parrot_theme/side.html"}>
+        <{/foreach}>
+        <!-- End left blocks loop -->
+</div>
+		</td>
+         <td class="leftCR"><img src="<{$xoops_imageurl}>images/zblock_09.jpg" alt="" width="17" height="198" /></td>
+     </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="leftBL">&nbsp;</td>
+        <td class="leftBC">&nbsp;</td>
+        <td class="leftBR">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+</table></td>
+
+      <td id="centercolumn">
+        <!-- Display center blocks if any -->
+        <{if $xoops_showcblock == 1}>
+        <table cellspacing="0">
+		<tr>
+			<td id="centerCcolumn" colspan="2">
+			<!-- Start center-center blocks loop -->
+			<{foreach item=block from=$xoops_ccblocks}>
+				<{include file="parrot_theme/bloc.html"}>
+			<{/foreach}>
+			<!-- End center-center blocks loop -->
+			</td>
+		</tr>
+		<tr>
+			<td id="centerLcolumn">		
+			<!-- Start center-left blocks loop -->
+			<{foreach item=block from=$xoops_clblocks}>
+				<{include file="parrot_theme/bloc.html"}>
+			<{/foreach}>
+			<!-- End center-left blocks loop -->
+			</td>
+			<td id="centerRcolumn">		
+			<!-- Start center-right blocks loop -->
+			<{foreach item=block from=$xoops_crblocks}>
+				<{include file="parrot_theme/bloc.html"}>
+			<{/foreach}>
+			<!-- End center-right blocks loop -->
+			</td>
+		</tr>
+        </table>
+        <{/if}>
+        <!-- End display center blocks -->
+       <{if $xoops_contents}>
+	 <div id="content">
+          <{$xoops_contents}>
+        </div>
+       <{/if}>
+        <{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright or $xoBlocks.page_bottomcenter}>
+        <table cellspacing="0">
+        <{if $xoBlocks.page_bottomcenter}>
+		<tr><td id="bottomCcolumn" colspan="2">
+			<{foreach from=$xoBlocks.page_bottomcenter item=block}><{include file="parrot_theme/bloc.html"}><{/foreach}>
+			</td>
+		</tr>
+		<{/if}>
+		<{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright}>
+		<tr>
+			<td id="bottomLcolumn">
+				<{foreach from=$xoBlocks.page_bottomleft item=block}><{include file="parrot_theme/bloc.html"}><{/foreach}>
+			</td>
+			<td id="bottomRcolumn">
+				<{foreach from=$xoBlocks.page_bottomright item=block}><{include file="parrot_theme/bloc.html"}><{/foreach}>
+			</td>
+		</tr>
+        <{/if}>
+        </table>
+        <{/if}>
+      </td>
+      <{if $xoops_showrblock == 1}>
+      <td id="rightcolumn">
+        <!-- Start right blocks loop -->
+        <{foreach item=block from=$xoops_rblocks}>
+          <{include file="parrot_theme/bloc.html"}>
+        <{/foreach}>
+        <!-- End right blocks loop -->
+      </td>
+      <{/if}>
+    </tr>
+  </table>
+
+  <table class="footertable" cellspacing="0">
+    <tr >
+      <td id="footerbar"><{$xoops_footer}></td>
+    </tr>
+  </table>
+</body>
+</html>

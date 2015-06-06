@@ -1,0 +1,16 @@
+Thank you for chosing one of our XOOPS themes
+
+In order for the transparency to work correctly in the header area you will need to do the folowing:
+
+Open File "iepngfix.htc" with any text editor and locate the folowing line:
+
+if (typeof blankImg == 'undefined') var blankImg = 'http://my_xoops_url/themes/theme1/blank.gif';
+
+
+Now, modify the path to the blank.gif according to your site's url.
+
+That is all
+
+Enjoy the theme, I hope it will serve you good.
+
+Erol 
